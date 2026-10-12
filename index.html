@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami Pure Plumbing | Home Water Filtration & Softening</title>
+    <title>Miami Pure Plumbing | Home Water Treatment Assessments</title>
     <style>
         :root { 
             --primary: #002244; 
@@ -29,7 +29,7 @@
         header h1 { margin: 0; font-size: 28px; font-weight: 700; }
         header p { margin: 8px 0 0; color: #a0c4ff; font-size: 15px; }
         
-        /* Barra de contacto de acción rápida */
+        /* Barra de contacto rápido */
         .contact-bar { 
             background-color: #001830; 
             text-align: center; 
@@ -68,7 +68,7 @@
         
         .support-text { color: #e2e8f0; font-size: 14px; }
 
-        /* Contenedor Informativo */
+        /* Contenedor Informativo Reformulado */
         .info-banner { 
             background-color: #ffffff; 
             border-left: 5px solid var(--primary); 
@@ -81,12 +81,13 @@
         .info-banner h2 { color: var(--primary); margin-top: 0; font-size: 20px; }
         .info-banner p { margin-bottom: 0; font-size: 15px; color: #475569; }
 
-        .section-title { text-align: center; color: var(--primary); margin: 40px 20px 20px; font-size: 24px; }
+        .section-title { text-align: center; color: var(--primary); margin: 40px 20px 10px; font-size: 24px; }
+        .section-subtitle { text-align: center; color: #64748b; margin-bottom: 30px; font-size: 15px; }
 
-        /* Grid de Precios */
+        /* Grid de Precios / Opciones */
         .pricing-grid { 
             max-width: 1050px; 
-            margin: 0 auto 60px; 
+            margin: 0 auto 40px; 
             padding: 0 20px; 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
@@ -105,8 +106,10 @@
             justify-content: space-between;
         }
         .card h3 { color: var(--primary); margin-top: 0; font-size: 21px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; }
-        .price { font-size: 30px; font-weight: 800; color: var(--accent); margin: 15px 0; text-align: center; }
-        .btn-buy { 
+        .price { font-size: 30px; font-weight: 800; color: var(--primary); margin: 10px 0 5px; text-align: center; }
+        .price-note { font-size: 12px; color: #64748b; text-align: center; margin-bottom: 20px; font-style: italic; }
+        
+        .btn-quote { 
             display: block; 
             background-color: var(--accent); 
             color: white; 
@@ -115,14 +118,36 @@
             text-decoration: none; 
             font-weight: bold; 
             border-radius: 6px; 
-            margin-bottom: 25px; 
-            font-size: 16px;
+            margin-bottom: 20px; 
+            font-size: 15px;
+            transition: background 0.2s;
         }
-        .btn-buy:hover { background-color: #15803d; }
+        .btn-quote:hover { background-color: #15803d; }
         
         h4 { margin: 18px 0 6px; font-size: 14px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; }
         ul { padding-left: 20px; font-size: 14px; color: #334155; margin: 0; }
         li { margin-bottom: 8px; }
+
+        /* Sección How It Works */
+        .how-it-works {
+            background-color: #ffffff;
+            max-width: 900px;
+            margin: 40px auto 60px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .step-item { padding: 15px; background: #f8fafc; border-radius: 8px; }
+        .step-number { font-weight: bold; color: var(--accent); font-size: 18px; margin-bottom: 5px; }
+        .step-title { font-size: 14px; font-weight: 600; color: var(--primary); }
 
         footer { 
             background-color: var(--primary); 
@@ -138,23 +163,24 @@
 
     <header>
         <h1>Miami Pure Plumbing</h1>
-        <p>Water Filtration Solutions for Miami-Dade Homes</p>
+        <p>Water Treatment &amp; Filtration Solutions for Miami-Dade Homes</p>
     </header>
 
-    <!-- Barra de contacto rápida (Teléfono + Email directo) -->
+    <!-- Barra de contacto rápido -->
     <div class="contact-bar">
-        <span class="support-text">Need Help or Have Questions?</span>
+        <span class="support-text">Have Questions or Need an On-Site Assessment?</span>
         <a href="tel:7868070105" class="call-btn">📞 Call / Text: (786) 807-0105</a>
-        <a href="mailto:miamipureplumbing@yahoo.com?subject=Service%20Assessment%20Request&body=Hello%20Miami%20Pure%20Plumbing%20Team%2C%0A%0AI%20would%20like%20to%20request%20more%20information%20%2F%20schedule%20an%20assessment.%0A%0AName%3A%20%0APhone%20Number%3A%20%0AProperty%20Address%3A%20%0ASystem%20Interested%20In%20(Under-Sink%20RO%20%2F%20Whole-Home)%3A%20%0A%0AThank%20you!" class="email-btn">✉️ Request via Email</a>
+        <a href="mailto:miamipureplumbing@yahoo.com?subject=Water%20Assessment%20Request&body=Hello%20Miami%20Pure%20Plumbing%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20property%20assessment%20and%20written%20quote.%0A%0AFull%20Name%3A%20%0APhone%20Number%3A%20%0AProperty%20Address%20%2F%20Zip%20Code%3A%20%0AHome%20Type%20(Single-Family%20%2F%20Condo)%3A%20%0ASystem%20of%20Interest%20(Under-Sink%20RO%20%2F%20Whole-Home)%3A%20%0A%0AThank%20you!" class="email-btn">✉️ Request Assessment via Email</a>
     </div>
 
-    <!-- Banner Informativo -->
+    <!-- Banner Introductorio Refinado -->
     <div class="info-banner">
-        <h2>Water Quality Solutions Tailored for South Florida</h2>
-        <p>Miami-Dade municipal water supply meets health standards, but often carries high mineral hardness and chlorine taste. Our specialized filtration and softening equipment improve water taste, protect plumbing fixtures, and reduce scale buildup.</p>
+        <h2>Finding the Right Treatment Option for Your Home</h2>
+        <p>Looking to improve drinking-water taste or address mineral buildup? We help you compare under-sink and whole-home treatment options based on your home’s specific layout, water needs, and verified equipment performance specifications.</p>
     </div>
 
-    <h2 class="section-title">Transparent Pricing & System Options</h2>
+    <h2 class="section-title">Explore Water Treatment Packages</h2>
+    <p class="section-subtitle">Transparent pricing guidelines prior to custom site evaluation</p>
 
     <div class="pricing-grid">
         
@@ -163,25 +189,27 @@
             <div>
                 <h3>Under-Sink Reverse Osmosis</h3>
                 <div class="price">$1,300.00 USD</div>
-                <a href="https://buy.stripe.com/aFa9AM0hAbK04OY11ec7u04" class="btn-buy" target="_blank" rel="noopener noreferrer">
-                    Order System &amp; Installation
+                <div class="price-note">Proposed package price. Final scope confirmed before contracting.</div>
+                
+                <a href="mailto:miamipureplumbing@yahoo.com?subject=Under-Sink%20RO%20Assessment%20Request&body=Hello%20Team%2C%0A%0AI%20am%20interested%20in%20an%20assessment%20for%20the%20Under-Sink%20Reverse%20Osmosis%20system.%0A%0AName%3A%20%0APhone%3A%20%0AAddress%3A%20" class="btn-quote">
+                    Request Assessment &amp; Written Quote
                 </a>
                 
-                <h4>System Details:</h4>
-                <p style="font-size: 14px; color: #475569;">Multi-stage reverse osmosis purification unit discreetly installed under your kitchen sink with a dedicated drinking faucet.</p>
+                <h4>System Overview:</h4>
+                <p style="font-size: 14px; color: #475569;">Designed for point-of-use drinking-water treatment discreetly installed under your kitchen sink with a dedicated faucet.</p>
                 
                 <h4>Key Benefits:</h4>
                 <ul>
-                    <li>Significantly reduces chlorine taste, odor, micro-particles, and heavy metals.</li>
-                    <li>Provides fresh, high-clarity water for cooking, drinking, and coffee.</li>
+                    <li>Improves taste and clarity for drinking, cooking, and coffee.</li>
+                    <li>Reduces chlorine taste and odor at the kitchen point of use.</li>
                     <li>May reduce reliance on single-use plastic water bottles.</li>
                 </ul>
 
-                <h4>Installation &amp; Scope:</h4>
+                <h4>Service &amp; Assessment Scope:</h4>
                 <ul>
-                    <li>Complete system delivery and unboxing.</li>
-                    <li>Professional installation by a licensed plumbing partner.</li>
-                    <li>System testing and leak checks included.</li>
+                    <li>Under-sink space and plumbing compatibility check.</li>
+                    <li>Specific reduction claims and maintenance details provided with selected model.</li>
+                    <li>Installation coordinated with licensed plumbing professionals.</li>
                 </ul>
             </div>
         </div>
@@ -191,35 +219,60 @@
             <div>
                 <h3>Whole-Home Filtration &amp; Softening</h3>
                 <div class="price">$4,000.00 USD</div>
-                <a href="https://buy.stripe.com/fZubIUe8q3duftCbFSc7u05" class="btn-buy" target="_blank" rel="noopener noreferrer">
-                    Order System &amp; Installation
+                <div class="price-note">Package price subject to compatibility assessment and written scope approval.</div>
+                
+                <a href="mailto:miamipureplumbing@yahoo.com?subject=Whole-Home%20System%20Assessment%20Request&body=Hello%20Team%2C%0A%0AI%20am%20interested%20in%20a%20property%20assessment%20for%20the%20Whole-Home%20Filtration%20%26%20Softening%20system.%0A%0AName%3A%20%0APhone%3A%20%0AAddress%3A%20" class="btn-quote">
+                    Request Assessment &amp; Written Quote
                 </a>
                 
-                <h4>System Details:</h4>
-                <p style="font-size: 14px; color: #475569;">Central water treatment and conditioning unit installed at your home's primary water intake line (garage or exterior main).</p>
+                <h4>System Overview:</h4>
+                <p style="font-size: 14px; color: #475569;">Central filtration and water conditioning station evaluated for primary water intake line placement (garage or exterior main line).</p>
                 
                 <h4>Key Benefits:</h4>
                 <ul>
-                    <li>Filters water for every shower, sink, and home appliance.</li>
-                    <li>Protects pipes, water heaters, and glass fixtures against harsh mineral scale.</li>
-                    <li>Leaves skin and hair feeling hydrated by reducing chlorine exposure.</li>
+                    <li>Reduces chlorine in treated water across home fixtures based on equipment specs.</li>
+                    <li>Protects plumbing fixtures and appliances from hard mineral scale buildup.</li>
+                    <li>Provides conditioned water for bathing and cleaning.</li>
                 </ul>
 
-                <h4>Installation &amp; Scope:</h4>
+                <h4>Service &amp; Assessment Scope:</h4>
                 <ul>
-                    <li>On-site logistics and equipment positioning.</li>
-                    <li>Main line integration by a certified plumbing professional.</li>
-                    <li>System calibration, initial flushing, and inspection.</li>
+                    <li>Main line access, water pressure, and drainage evaluation.</li>
+                    <li>Written scope disclosing all required components before authorization.</li>
+                    <li>Installation performed by certified plumbing contractor partners.</li>
                 </ul>
             </div>
         </div>
 
     </div>
 
+    <!-- Sección How It Works -->
+    <div class="how-it-works">
+        <h3 style="text-align: center; color: var(--primary); margin-top: 0;">How It Works</h3>
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-title">Request Assessment</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-title">Receive Equipment Specs &amp; Written Quote</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-title">Approve Provider Contract</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-title">Schedule Professional Installation</div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 Miami Pure Plumbing. All rights reserved. Servicing Miami-Dade, FL.<br>
-        Installations are performed by independent licensed and insured plumbing partners.<br>
-        Official Contact: <a href="tel:7868070105">(786) 807-0105</a> | <a href="mailto:miamipureplumbing@yahoo.com?subject=Service%20Assessment%20Request&body=Hello%20Miami%20Pure%20Plumbing%20Team%2C%0A%0AI%20would%20like%20to%20request%20more%20information%20%2F%20schedule%20an%20assessment.%0A%0AName%3A%20%0APhone%20Number%3A%20%0AProperty%20Address%3A%20%0ASystem%20Interested%20In%20(Under-Sink%20RO%20%2F%20Whole-Home)%3A%20%0A%0AThank%20you!">miamipureplumbing@yahoo.com</a></p>
+        Miami Pure Plumbing provides marketing and administrative coordination. Installation services are offered and performed by independent licensed and insured plumbing partners.<br>
+        Official Support &amp; Direct Contact: <a href="tel:7868070105">(786) 807-0105</a> | <a href="mailto:miamipureplumbing@yahoo.com">miamipureplumbing@yahoo.com</a></p>
     </footer>
 
 </body>
