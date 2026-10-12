@@ -1,107 +1,225 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami Pure Plumbing | Premium Luxury Water Systems</title>
+    <title>Miami Pure Plumbing | Home Water Filtration & Softening</title>
     <style>
-        :root { --primary: #002244; --accent: #16a34a; --bg: #f9f9f9; --text: #333; }
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); }
-        header { background-color: var(--primary); color: #ffffff; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 28px; }
-        header p { margin: 5px 0 0; color: #a0c4ff; }
-        .alert-banner { background-color: #e6f0fa; border-left: 5px solid var(--primary); padding: 20px; max-width: 900px; margin: 30px auto; border-radius: 4px; text-align: center; }
-        .alert-banner h2 { color: var(--primary); margin-top: 0; font-size: 22px; }
-        .section-title { text-align: center; color: var(--primary); margin-top: 40px; font-size: 24px; }
-        .container { max-width: 1000px; margin: 0 auto 50px; padding: 0 20px; display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-        .card { background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; width: 450px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary); margin-top: 0; font-size: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
-        .price { font-size: 24px; font-weight: bold; color: var(--accent); margin: 15px 0; text-align: center; }
-        .btn { display: block; background-color: var(--accent); color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-bottom: 20px; }
-        .btn:hover { background-color: #15803d; }
-        ul { padding-left: 20px; line-height: 1.6; font-size: 14px; }
-        li { margin-bottom: 10px; }
-        footer { background-color: var(--primary); color: white; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
+        :root { 
+            --primary: #002244; 
+            --accent: #16a34a; 
+            --bg: #f8fafc; 
+            --text: #1e293b;
+            --card-border: #cbd5e1;
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6;
+        }
+        header { 
+            background-color: var(--primary); 
+            color: #ffffff; 
+            padding: 25px 20px; 
+            text-align: center; 
+        }
+        header h1 { margin: 0; font-size: 28px; font-weight: 700; }
+        header p { margin: 8px 0 0; color: #a0c4ff; font-size: 15px; }
+        
+        /* Barra de contacto de acción rápida */
+        .contact-bar { 
+            background-color: #001830; 
+            text-align: center; 
+            padding: 12px 20px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .call-btn { 
+            display: inline-block; 
+            background-color: var(--accent); 
+            color: #ffffff; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 6px; 
+            font-size: 15px; 
+            transition: background 0.2s;
+        }
+        .call-btn:hover { background-color: #15803d; }
+        
+        .email-btn {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .email-btn:hover { background-color: #0369a1; }
+        
+        .support-text { color: #e2e8f0; font-size: 14px; }
+
+        /* Contenedor Informativo */
+        .info-banner { 
+            background-color: #ffffff; 
+            border-left: 5px solid var(--primary); 
+            padding: 25px; 
+            max-width: 900px; 
+            margin: 30px auto; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        .info-banner h2 { color: var(--primary); margin-top: 0; font-size: 20px; }
+        .info-banner p { margin-bottom: 0; font-size: 15px; color: #475569; }
+
+        .section-title { text-align: center; color: var(--primary); margin: 40px 20px 20px; font-size: 24px; }
+
+        /* Grid de Precios */
+        .pricing-grid { 
+            max-width: 1050px; 
+            margin: 0 auto 60px; 
+            padding: 0 20px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+            justify-content: center; 
+        }
+        
+        .card { 
+            background: #ffffff; 
+            border: 1px solid var(--card-border); 
+            border-radius: 12px; 
+            padding: 30px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03); 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card h3 { color: var(--primary); margin-top: 0; font-size: 21px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; }
+        .price { font-size: 30px; font-weight: 800; color: var(--accent); margin: 15px 0; text-align: center; }
+        .btn-buy { 
+            display: block; 
+            background-color: var(--accent); 
+            color: white; 
+            text-align: center; 
+            padding: 14px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 6px; 
+            margin-bottom: 25px; 
+            font-size: 16px;
+        }
+        .btn-buy:hover { background-color: #15803d; }
+        
+        h4 { margin: 18px 0 6px; font-size: 14px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; }
+        ul { padding-left: 20px; font-size: 14px; color: #334155; margin: 0; }
+        li { margin-bottom: 8px; }
+
+        footer { 
+            background-color: var(--primary); 
+            color: #94a3b8; 
+            text-align: center; 
+            padding: 30px 20px; 
+            font-size: 13px; 
+        }
+        footer a { color: #a0c4ff; text-decoration: underline; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Miami Pure Plumbing</h1>
-        <p>100% Pure &amp; Safe Water in Miami-Dade. No Hassles, All-Inclusive Flat Rate Pricing.</p>
+        <p>Water Filtration Solutions for Miami-Dade Homes</p>
     </header>
 
-    <div class="alert-banner">
-        <h2>Did you know South Florida tap water requires specialized treatment?</h2>
-        <p>Miami-Dade municipal water contains some of the highest hardness, chlorine, and mineral levels in the country. Protect your family's health and home infrastructure with professional-grade installations.</p>
+    <!-- Barra de contacto rápida (Teléfono + Email directo) -->
+    <div class="contact-bar">
+        <span class="support-text">Need Help or Have Questions?</span>
+        <a href="tel:7868070105" class="call-btn">📞 Call / Text: (786) 807-0105</a>
+        <a href="mailto:miamipureplumbing@yahoo.com?subject=Service%20Assessment%20Request&body=Hello%20Miami%20Pure%20Plumbing%20Team%2C%0A%0AI%20would%20like%20to%20request%20more%20information%20%2F%20schedule%20an%20assessment.%0A%0AName%3A%20%0APhone%20Number%3A%20%0AProperty%20Address%3A%20%0ASystem%20Interested%20In%20(Under-Sink%20RO%20%2F%20Whole-Home)%3A%20%0A%0AThank%20you!" class="email-btn">✉️ Request via Email</a>
     </div>
 
-    <h2 class="section-title">Transparent, All-Inclusive Pricing for Miami-Dade</h2>
+    <!-- Banner Informativo -->
+    <div class="info-banner">
+        <h2>Water Quality Solutions Tailored for South Florida</h2>
+        <p>Miami-Dade municipal water supply meets health standards, but often carries high mineral hardness and chlorine taste. Our specialized filtration and softening equipment improve water taste, protect plumbing fixtures, and reduce scale buildup.</p>
+    </div>
 
-    <div class="container">
-        <!-- TIER 1 -->
+    <h2 class="section-title">Transparent Pricing & System Options</h2>
+
+    <div class="pricing-grid">
+        
+        <!-- OPCIÓN 1: RO BAJO FREGADERO -->
         <div class="card">
-            <h3>Tier 1: Reverse Osmosis (Under-Sink)</h3>
-            <div class="price">$1,450.00 USD</div>
-            <a href="https://buy.stripe.com/aFa9AM0hAbK04OY11ec7u04" class="btn" target="_blank" rel="noopener noreferrer">
-                Purchase System
-            </a>
-            
-            <h4>What it is:</h4>
-            <p>Advanced 6-stage reverse osmosis purification unit discreetly installed under your kitchen sink, featuring a dedicated chrome faucet.</p>
-            
-            <h4>Health &amp; Wellness:</h4>
-            <ul>
-                <li>Removes 99.9% of lead, microplastics, chlorine, and harmful contaminants.</li>
-                <li>Provides crystal-clear, odor-free water for drinking, cooking, and coffee.</li>
-            </ul>
+            <div>
+                <h3>Under-Sink Reverse Osmosis</h3>
+                <div class="price">$1,300.00 USD</div>
+                <a href="https://buy.stripe.com/aFa9AM0hAbK04OY11ec7u04" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                    Order System &amp; Installation
+                </a>
+                
+                <h4>System Details:</h4>
+                <p style="font-size: 14px; color: #475569;">Multi-stage reverse osmosis purification unit discreetly installed under your kitchen sink with a dedicated drinking faucet.</p>
+                
+                <h4>Key Benefits:</h4>
+                <ul>
+                    <li>Significantly reduces chlorine taste, odor, micro-particles, and heavy metals.</li>
+                    <li>Provides fresh, high-clarity water for cooking, drinking, and coffee.</li>
+                    <li>May reduce reliance on single-use plastic water bottles.</li>
+                </ul>
 
-            <h4>Financial Benefits:</h4>
-            <ul>
-                <li>Eliminates single-use plastic water bottles, saving $1,200+ annually.</li>
-            </ul>
-
-            <h4>Service &amp; Installation:</h4>
-            <ul>
-                <li>Direct express delivery to your home.</li>
-                <li>Expert installation by a certified plumber (1.5 to 2 hours).</li>
-            </ul>
+                <h4>Installation &amp; Scope:</h4>
+                <ul>
+                    <li>Complete system delivery and unboxing.</li>
+                    <li>Professional installation by a licensed plumbing partner.</li>
+                    <li>System testing and leak checks included.</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- TIER 2 -->
+        <!-- OPCIÓN 2: ENTRADA PRINCIPAL / CASA COMPLETA -->
         <div class="card">
-            <h3>Tier 2: Full Shield (Main Line)</h3>
-            <div class="price">$4,800.00 USD</div>
-            <a href="https://buy.stripe.com/fZubIUe8q3duftCbFSc7u05" class="btn" target="_blank" rel="noopener noreferrer">
-                Purchase System
-            </a>
-            
-            <h4>What it is:</h4>
-            <p>Industrial filtration and water softening station connected directly to your home's main external water supply line.</p>
-            
-            <h4>Health &amp; Wellness:</h4>
-            <ul>
-                <li>Prevents harsh chlorine absorption in showers, leaving skin and hair hydrated.</li>
-                <li>Ensures purified water from every faucet in the house.</li>
-            </ul>
+            <div>
+                <h3>Whole-Home Filtration &amp; Softening</h3>
+                <div class="price">$4,000.00 USD</div>
+                <a href="https://buy.stripe.com/fZubIUe8q3duftCbFSc7u05" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                    Order System &amp; Installation
+                </a>
+                
+                <h4>System Details:</h4>
+                <p style="font-size: 14px; color: #475569;">Central water treatment and conditioning unit installed at your home's primary water intake line (garage or exterior main).</p>
+                
+                <h4>Key Benefits:</h4>
+                <ul>
+                    <li>Filters water for every shower, sink, and home appliance.</li>
+                    <li>Protects pipes, water heaters, and glass fixtures against harsh mineral scale.</li>
+                    <li>Leaves skin and hair feeling hydrated by reducing chlorine exposure.</li>
+                </ul>
 
-            <h4>Financial Benefits:</h4>
-            <ul>
-                <li>Protects water heaters, pipes, and appliances from costly mineral buildup.</li>
-                <li>Reduces household detergent and soap consumption by up to 50%.</li>
-            </ul>
-
-            <h4>Service &amp; Installation:</h4>
-            <ul>
-                <li>Express logistics straight to your property.</li>
-                <li>Master installation on your home's main external line (4 hours).</li>
-            </ul>
+                <h4>Installation &amp; Scope:</h4>
+                <ul>
+                    <li>On-site logistics and equipment positioning.</li>
+                    <li>Main line integration by a certified plumbing professional.</li>
+                    <li>System calibration, initial flushing, and inspection.</li>
+                </ul>
+            </div>
         </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Miami Pure Plumbing. All rights reserved. Servicing all of Miami-Dade, FL.<br>
-        Official Support &amp; Questions: Call or Text Maria AI at (786) 807-0105</p>
+        <p>&copy; 2026 Miami Pure Plumbing. All rights reserved. Servicing Miami-Dade, FL.<br>
+        Installations are performed by independent licensed and insured plumbing partners.<br>
+        Official Contact: <a href="tel:7868070105">(786) 807-0105</a> | <a href="mailto:miamipureplumbing@yahoo.com?subject=Service%20Assessment%20Request&body=Hello%20Miami%20Pure%20Plumbing%20Team%2C%0A%0AI%20would%20like%20to%20request%20more%20information%20%2F%20schedule%20an%20assessment.%0A%0AName%3A%20%0APhone%20Number%3A%20%0AProperty%20Address%3A%20%0ASystem%20Interested%20In%20(Under-Sink%20RO%20%2F%20Whole-Home)%3A%20%0A%0AThank%20you!">miamipureplumbing@yahoo.com</a></p>
     </footer>
 
 </body>
