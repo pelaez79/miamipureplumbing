@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miami Pure Plumbing | Premium Luxury Water Systems</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
-        header { background-color: #002244; color: #ffffff; padding: 30px 20px; text-align: center; }
+        :root { --primary: #002244; --accent: #16a34a; --bg: #f9f9f9; --text: #333; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: var(--text); }
+        header { background-color: var(--primary); color: #ffffff; padding: 30px 20px; text-align: center; }
         header h1 { margin: 0; font-size: 28px; }
         header p { margin: 5px 0 0; color: #a0c4ff; }
-        .alert-banner { background-color: #e6f0fa; border-left: 5px solid #002244; padding: 20px; max-width: 900px; margin: 30px auto; border-radius: 4px; text-align: center; }
-        .alert-banner h2 { color: #002244; margin-top: 0; font-size: 22px; }
+        .alert-banner { background-color: #e6f0fa; border-left: 5px solid var(--primary); padding: 20px; max-width: 900px; margin: 30px auto; border-radius: 4px; text-align: center; }
+        .alert-banner h2 { color: var(--primary); margin-top: 0; font-size: 22px; }
+        .section-title { text-align: center; color: var(--primary); margin-top: 40px; font-size: 24px; }
         .container { max-width: 1000px; margin: 0 auto 50px; padding: 0 20px; display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
         .card { background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; width: 450px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .card h3 { color: #002244; margin-top: 0; font-size: 20px; border-bottom: 2px solid #002244; padding-bottom: 10px; }
-        .price { font-size: 24px; font-weight: bold; color: #16a34a; margin: 15px 0; text-align: center; }
-        .btn { display: block; background-color: #16a34a; color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-bottom: 20px; }
+        .card h3 { color: var(--primary); margin-top: 0; font-size: 20px; border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
+        .price { font-size: 24px; font-weight: bold; color: var(--accent); margin: 15px 0; text-align: center; }
+        .btn { display: block; background-color: var(--accent); color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-bottom: 20px; }
         .btn:hover { background-color: #15803d; }
-        .section-title { text-align: center; color: #002244; margin-top: 40px; }
         ul { padding-left: 20px; line-height: 1.6; font-size: 14px; }
         li { margin-bottom: 10px; }
-        footer { background-color: #002244; color: white; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
+        footer { background-color: var(--primary); color: white; text-align: center; padding: 20px; margin-top: 50px; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -92,7 +93,7 @@
 
             <h4>Service &amp; Installation:</h4>
             <ul>
-                <li>Express logistics straight to your property.</li> 
+                <li>Express logistics straight to your property.</li>
                 <li>Master installation on your home's main external line (4 hours).</li>
             </ul>
         </div>
