@@ -457,8 +457,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top" style="padding:0">
   <div class="hero-media" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="assets/poster-pure-water.webp">
-      <source src="assets/pure-water.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline preload="none" poster="assets/poster-pure-water.webp" data-src="assets/pure-water.mp4" aria-hidden="true">
     </video>
     <div class="hero-shade"></div>
   </div>
@@ -738,6 +737,21 @@
       });
     });
   })();
+</script>
+
+<!--Hero video: carga diferida tras window load para no competir con el póster (LCP)-->
+<script>
+(function(){
+function loadHeroVideo(){
+  var v=document.querySelector('.hero-media video[data-src]');
+  if(!v||v.getAttribute('src'))return;
+  v.src=v.getAttribute('data-src');
+  v.load();
+  var p=v.play();
+  if(p&&p.catch){p.catch(function(){});}
+}
+if(document.readyState==='complete'){loadHeroVideo();}else{window.addEventListener('load',loadHeroVideo);}
+})();
 </script>
 
 <!--Start of Tawk.to Script-->
